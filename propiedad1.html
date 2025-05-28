@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Residencia en Mérida | GRN Inversiones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            padding-top: 40px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #222;
+        }
+        .property-info {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+        .property-info img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        footer {
+            background: #212529;
+            color: white;
+            padding: 35px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        label.form-label {
+            font-weight: 600;
+        }
+        select.form-select {
+            display: inline-block;
+        }
+
+        /* Sección contacto */
+        .contact-section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            margin-top: 50px;
+        }
+        .contact-section h2 {
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        .contact-list li svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            fill: #0d6efd; /* color bootstrap primary */
+            flex-shrink: 0;
+        }
+        .contact-list li a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .contact-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img class="logo" src="public/images/GRN_NEGRO.png" alt="Logo" width="50" /> GRN Inversiones
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="section-title">Residencia en Mérida</h1>
+
+        <div class="property-info">
+            <img src="public/images/img1.jpg" alt="Residencia en Mérida" />
+            
+            <p><strong>Ubicación:</strong> Mérida, Yucatán</p>
+
+            <!-- Selector de moneda -->
+            <label for="currencySelect" class="form-label mt-3">Selecciona moneda:</label>
+            <select id="currencySelect" class="form-select" style="max-width: 150px;">
+                <option value="MXN" selected>Pesos (MXN)</option>
+                <option value="USD">Dólares (USD)</option>
+                <option value="EUR">Euros (EUR)</option>
+            </select>
+
+            <p><strong>Precio:</strong> <span id="priceDisplay">$2,500,000 MXN</span></p>
+
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>3 recámaras</li>
+                <li>2 baños</li>
+                <li>Cocina integral</li>
+                <li>Amplio jardín</li>
+                <li>Estacionamiento para 2 autos</li>
+            </ul>
+
+            <p>
+                🏡 Esta hermosa residencia en Mérida ofrece un diseño moderno y cómodos espacios, ideal para familias
+                que buscan tranquilidad en una de las mejores ciudades de México.
+            </p>
+
+            <a href="servicios.html" class="btn btn-primary">Volver a Servicios</a>
+        </div>
+        <section class="contact-section" aria-label="Contacto">
+            <p style="text-align:center; font-size:1.8rem; font-weight:700; color:#0f1412; margin-bottom:20px; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2); font-family: 'Poppins', sans-serif;">
+            ¡Tu nuevo hogar te está esperando! Contáctanos y da el primer paso hacia la vida que mereces.
+        </p>
+        
+            
+        </section>
+        
+
+        <!-- Sección de contacto -->
+        <section class="contact-section" aria-label="Contacto">
+            <h2>Contacto</h2>
+            <ul class="contact-list">
+                <li>
+                    <!-- Email icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.99l7.53 6.3a1 1 0 0 0 1.02 0L20 8.99V18H4z"/>
+                    </svg>
+                    <a href="mailto:info@inmobiliariaxyz.com">info@inmobiliariaxyz.com</a>
+                </li>
+                <li>
+                    <!-- Phone icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.27c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C7.37 21.99 2 16.62 2 10a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.27 1.01l-2.18 2.21z"/>
+                    </svg>
+                    <a href="tel:+525512345678">+52 55 1234 5678</a>
+                </li>
+                <li>
+                    <!-- WhatsApp icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.9 11.9 0 0 0 2.31 7.03L0 24l4.97-2.31A11.9 11.9 0 0 0 12 24c6.63 0 12-5.37 12-12a11.93 11.93 0 0 0-3.48-8.52zm-8.52 16.7a7.13 7.13 0 0 1-3.64-1.06l-.26-.16-3.43.8.73-3.32-.17-.27a7.12 7.12 0 1 1 6.77 3.01zm3.9-5.37c-.21-.1-1.22-.6-1.41-.67-.18-.07-.31-.1-.44.1s-.5.67-.61.81-.23.15-.44.05a5.3 5.3 0 0 1-1.55-.96 5.91 5.91 0 0 1-1.1-1.36c-.12-.2 0-.3.08-.4.08-.07.18-.18.27-.28.09-.1.12-.17.18-.28.06-.12 0-.22-.02-.31-.04-.1-.44-1.07-.6-1.46-.16-.38-.32-.33-.44-.34-.11-.02-.24-.03-.37-.03s-.39.05-.6.29a2.52 2.52 0 0 0-.9.88 3.76 3.76 0 0 0-1.36 3.31c.02.17.3.52.67.8a5.6 5.6 0 0 0 4.56 1.34 4.68 4.68 0 0 0 1.86-.76 4.37 4.37 0 0 0 1.34-1.65 3.96 3.96 0 0 0-.52-1.27z"/>
+                    </svg>
+                    <a href="https://wa.me/525512345678" target="_blank" rel="noopener">WhatsApp +52 55 1234 5678</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Grupo RN Inversión Inmobiliaria S.A. de C.V.</p>
+        <p>Contacto: info@inmobiliariaxyz.com | Tel: +52 55 1234 5678</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Precio base en MXN
+        const basePriceMXN = 2500000;
+
+        // Tipos de cambio (ejemplos, actualízalos si quieres)
+        const exchangeRates = {
+            USD: 0.056,  // 1 MXN = 0.056 USD
+            EUR: 0.051   // 1 MXN = 0.051 EUR
+        };
+
+        const currencySelect = document.getElementById('currencySelect');
+        const priceDisplay = document.getElementById('priceDisplay');
+
+        currencySelect.addEventListener('change', () => {
+            const selectedCurrency = currencySelect.value;
+            let displayPrice = '';
+
+            if (selectedCurrency === 'MXN') {
+                displayPrice = `$${basePriceMXN.toLocaleString('es-MX')} MXN`;
+            } else if (selectedCurrency === 'USD') {
+                const usdPrice = (basePriceMXN * exchangeRates.USD).toFixed(2);
+                displayPrice = `$${Number(usdPrice).toLocaleString('en-US')} USD`;
+            } else if (selectedCurrency === 'EUR') {
+                const eurPrice = (basePriceMXN * exchangeRates.EUR).toFixed(2);
+                displayPrice = `€${Number(eurPrice).toLocaleString('de-DE')} EUR`;
+            }
+
+            priceDisplay.textContent = displayPrice;
+        });
+    </script>
+</body>
+</html>
+
