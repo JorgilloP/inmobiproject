@@ -146,3 +146,60 @@ footer{
     border-radius: 8px; /* Bordes redondeados */
 }
 
+
+
+/* Estilos Formulario Registro */
+.card {
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Evita cortes */
+}
+
+.card-header {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 10px; /* Bordes suaves en inputs */
+    padding: 10px;
+}
+
+.btn-primary {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #004080; /* Oscurecer el azul */
+}
+
+.btn-secondary {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: #505050; /* Oscurecer el botón */
+}
+
+.card-footer a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card-footer a:hover {
+    color: #004080; /* Oscurecer en hover */
+}
+
+.btn-secondary i {
+    font-size: 20px;
+    margin-right: 5px;
+}
