@@ -1,23 +1,20 @@
 <?php
-function conectarBD() {
+
+function conectarBD()
+{
+    // Configuración de la conexión
     $servername = "localhost";
     $username = "root";
     $password = "";
     $database = "inmobi";
 
-    // Crear conexión
-    $conn = new mysqli($servername, $username, $password, $database);
+    // Conectar a la base de datos
+    $conn = mysqli_connect($servername, $username, $password, $database);
 
     // Verificar conexión
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    } 
-    return $conn; // Retorna el objeto de conexión
-}
+    if (!$conn) {
+        die("Error de conexión: " . mysqli_connect_error());
+    }
 
-// Uso de la función
-$conn = conectarBD();
-if ($conn) {
-    echo "Conexión exitosa";
+    return $conn;
 }
-?>

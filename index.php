@@ -1,3 +1,7 @@
+<?php
+include 'php/sesionFunciones.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -21,6 +25,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <!-- Script Botón Usuario -->
   <script src="public/js/btnUser.js"></script>
+  <script src="public/js/togglePassword.js"></script>
 </head>
 
 <body>
@@ -199,33 +204,23 @@
     </div>
   </div>
 
-  <!-- Modal Inicio de Sesión -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <!-- Modal de usuario -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          <h5 class="modal-title">Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="modal-body">
-          <form action="php/login.php" method="POST">
-            <div class="mb-3">
-              <label for="inputUser" class="form-label">Nombre de Usuario</label>
-              <input type="text" class="form-control" id="inputUser" name="user" placeholder="Usuario" required
-                minlength="5" maxlength="18" />
-            </div>
-            <div class="mb-3">
-              <label for="inputPassword" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Contraseña"
-                required minlength="8" />
-              <a href="registro.html">¿No tienes cuenta? Registrate</a>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
-          </form>
+        <div class="modal-body text-left">
+          <?php
+          modalUsuario();
+          ?>
         </div>
       </div>
     </div>
   </div>
+
 
 
   <!-- Pie de página -->
