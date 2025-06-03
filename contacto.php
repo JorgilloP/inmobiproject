@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 
 <head>
   <meta charset="UTF-8">
@@ -24,6 +24,38 @@
   <script src="public/js/btnUser.js"></script>
 </head>
 
+<?php
+include 'php/sesionFunciones.php';
+
+if (!verificarSesion()) {
+  echo '<div class="d-flex align-items-center justify-content-center min-vh-100">';
+  echo '<div class="alert alert-warning text-center p-4 shadow-lg rounded-3 w-50 animate__animated animate__fadeIn">';
+  echo '<i class="bi bi-exclamation-circle-fill fs-1 text-warning"></i>';
+  echo '<h4 class="mt-3 fw-bold">Sesión no válida</h4>';
+  echo '<p class="mb-3">Redirigiendo a la página de login en <span id="contador">5</span> segundos...</p>';
+  echo '<button class="btn btn-warning px-4 py-2 fw-bold" onclick="window.location.href = \'login.html\';">Ir ahora</button>';
+  echo '</div>';
+  echo '</div>';
+
+  // Script para el contador y la redirección automática
+  echo '<script>
+            let tiempo = 5;
+            const contador = document.getElementById("contador");
+
+            const interval = setInterval(() => {
+                tiempo--;
+                contador.textContent = tiempo;
+                if (tiempo === 0) {
+                    clearInterval(interval);
+                    window.location.href = "login.html";
+                }
+            }, 1000);
+          </script>';
+  exit();
+}
+?>
+
+
 <body>
 
   <!-- Barra de navegación -->
@@ -41,10 +73,10 @@
       <!-- Menú -->
       <div class="collapse navbar-collapse justify-content-lg-end justify-content-center text-center" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.php">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.php">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
         </ul>
 
         <!-- Botón muñequito para abrir modal -->
@@ -75,23 +107,40 @@
     </a>
   </div>
 
+  <!-- Modal de usuario -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-left">
+          <?php
+          modalUsuario();
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Contacto -->
   <section class="container mt-5 text-center">
     <h1>📞 Contáctanos</h1>
     <p>Déjanos tu información y te asesoraremos en la compra, venta o renta de tu propiedad.</p>
-    <form class="p-4 bg-light rounded shadow text-center">
+    <form class="p-4 bg-light rounded shadow text-center" method="post" action="php/contact.php">
       <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Nombre" required />
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required />
       </div>
       <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Correo electrónico" required />
+        <input type="email" id="correo" name="correo" class="form-control" placeholder="Correo electrónico" required />
       </div>
       <div class="mb-3">
-        <input type="tel" class="form-control" placeholder="Número de teléfono" required />
+        <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Número de teléfono" required />
       </div>
       <div class="mb-3">
-        <textarea class="form-control" rows="4" placeholder="Mensaje"></textarea>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Mensaje"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>

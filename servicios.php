@@ -79,130 +79,6 @@ include 'php/sesionFunciones.php';
     </a>
   </div>
 
-  <!-- Carrusel -->
-  <div id="carouselExample" class="carousel slide w-100 mx-auto mt-0" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="public/images/img1.jpg" class="d-block w-100" alt="Propiedad 1" />
-        <h1>Compra de Inmuebles</h1>
-        <a href="#" class="btn btn-primary">Compra</a>
-      </div>
-      <div class="carousel-item">
-        <img src="public/images/img2.jpg" class="d-block w-100" alt="Propiedad 2" />
-        <h1>Venta de Inmuebles</h1>
-        <a href="#" class="btn btn-primary">Venta</a>
-      </div>
-      <div class="carousel-item">
-        <img src="public/images/img3.jpg" class="d-block w-100" alt="Propiedad 2" />
-        <h1>Renta de Inmuebles</h1>
-        <a href="#" class="btn btn-primary">Renta</a>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-
-  <!-- Sección Sobre Nosotros -->
-  <div class="container mt-5">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <h2>🏡 Sobre Nosotros</h2>
-        <p>En <strong>GRN Inversiones</strong>, nos especializamos en la compra, venta y renta de propiedades en
-          ubicaciones estratégicas como Mérida, Yucatán y Quintana Roo.</p>
-        <p>Con más de 10 años de experiencia en el sector inmobiliario, ofrecemos asesoría personalizada, garantizando
-          transparencia y confianza en cada negociación.</p>
-        <p>Nos dedicamos a conectar a nuestros clientes con oportunidades únicas de inversión, asegurando un servicio
-          profesional y eficiente.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="public/images/sobre-nosotros.jpg" class="img-fluid rounded shadow" alt="Sobre GRN Inversiones" />
-      </div>
-    </div>
-  </div>
-
-  <!-- Información del servicio -->
-  <section class="container text-center mt-5">
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <h3>🏠 Compra</h3>
-        <p>Encuentra la casa de tus sueños con nuestra selección de propiedades. Te ayudamos en todo el proceso para que
-          tu compra sea fácil y segura.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>📈 Venta</h3>
-        <p>¿Quieres vender tu propiedad? Nosotros te conectamos con compradores potenciales y optimizamos el proceso
-          para obtener el mejor trato.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>🔑 Renta</h3>
-        <p>Si buscas una propiedad para rentar, tenemos opciones ideales para ti. Encuentra la mejor ubicación y
-          condiciones para tu estilo de vida.</p>
-      </div>
-    </div>
-    <a href="servicios.php" class="btn btn-primary btn-lg mt-3">Explorar Propiedades</a>
-  </section>
-
-  <!-- Algunas propiedades -->
-  <section class="container mt-5">
-    <h2>🌟 Propiedades Destacadas</h2>
-    <div class="row">
-      <div class="col-md-4 text-center mb-5">
-        <img src="public/images/img1.jpg" class="img-fluid rounded shadow" alt="Propiedad 1" />
-        <h3>🏡 Residencia en Mérida</h3>
-        <p>3 recámaras | 2 baños | $2,500,000 MXN</p>
-        <a href="#" class="btn btn-primary">Ver más</a>
-      </div>
-      <div class="col-md-4 text-center mb-5">
-        <img src="public/images/img2.jpg" class="img-fluid rounded shadow" alt="Propiedad 2" />
-        <h3>🏢 Departamento en Cancún</h3>
-        <p>2 recámaras | 1 baño | $1,800,000 MXN</p>
-        <a href="#" class="btn btn-primary">Ver más</a>
-      </div>
-      <div class="col-md-4 text-center mb-5">
-        <img src="public/images/img3.jpg" class="img-fluid rounded shadow" alt="Propiedad 3" />
-        <h3>🌴 Casa en Playa del Carmen</h3>
-        <p>4 recámaras | 3 baños | $3,200,000 MXN</p>
-        <a href="#" class="btn btn-primary">Ver más</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Sección con información detallada -->
-  <div class="container mt-5">
-    <div class="row">
-      <!-- Asesoría Personalizada -->
-      <div class="col-md-6">
-        <div class="p-4 bg-light rounded shadow">
-          <h3>📞 Asesoría Personalizada</h3>
-          <p>Te acompañamos en cada paso del proceso de compra o renta para que tomes la mejor decisión.</p>
-          <ul>
-            <li>Asesoría legal y financiera</li>
-            <li>Visitas guiadas</li>
-            <li>Soporte postventa</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Amplia Red de Contactos -->
-      <div class="col-md-6">
-        <div class="p-4 bg-light rounded shadow">
-          <h3>🌐 Amplia Red de Contactos</h3>
-          <p>Contamos con alianzas estratégicas con desarrolladores, bancos e instituciones para ofrecerte las mejores
-            opciones.</p>
-          <ul>
-            <li>Proyectos exclusivos</li>
-            <li>Financiamiento preferencial</li>
-            <li>Oportunidades únicas</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Modal de usuario -->
   <div class="modal fade" id="loginModal" tabindex="-1">
@@ -222,6 +98,98 @@ include 'php/sesionFunciones.php';
   </div>
 
 
+  <div class="container text-center my-5">
+    <h1 class="section-title">Propiedades en Venta</h1>
+
+    <!-- Filtros -->
+    <div class="mb-4 contact-section">
+      <h2>Filtrar propiedades</h2>
+      <p>Coloca la ciudad de tu preferencia</p>
+      <div class="row g-2">
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="searchCiudad" placeholder="Ciudad (ej. Cancún, Tulum)" />
+        </div>
+        <div class="col-md-4">
+          <select class="form-control" id="searchRecamaras">
+            <option value="">Todas las recámaras</option>
+            <option value="1">1 recámara</option>
+            <option value="2">2 recámaras</option>
+            <option value="3">3 recámaras</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <select class="form-control" id="searchPrecio">
+            <option value="">Sin límite de precio</option>
+            <option value="2000000">$2,000,000 MXN</option>
+            <option value="3000000">$3,000,000 MXN</option>
+            <option value="5000000">$5,000,000 MXN</option>
+          </select>
+        </div>
+      </div>
+      <button onclick="filtrarPropiedades()" class="btn btn-primary mt-3">Buscar</button>
+    </div>
+
+    <!-- Mensaje si no hay resultados -->
+    <div id="mensajeNoResultados">No se encontraron propiedades con esos filtros.</div>
+
+    <!-- Propiedades -->
+    <div class="row g-4" id="propiedadesContainer">
+      <!-- Propiedad 1 -->
+      <div class="col-md-4 propiedad" data-ciudad="Mérida" data-recamaras="3" data-precio="2500000">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/img1.jpg" class="card-img-top" alt="Residencia en Mérida">
+          <div class="card-body">
+            <h5 class="card-title">🏡 Residencia en Mérida</h5>
+            <p class="card-text">3 recámaras | 2 baños | $2,500,000 MXN</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propiedad 2 -->
+      <div class="col-md-4 propiedad" data-ciudad="Cancún" data-recamaras="2" data-precio="1800000">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/img2.jpg" class="card-img-top" alt="Departamento en Cancún">
+          <div class="card-body">
+            <h5 class="card-title">🏢 Departamento en Cancún</h5>
+            <p class="card-text">2 recámaras | 1 baño | $1,800,000 MXN</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propiedad 3 -->
+      <div class="col-md-4 propiedad" data-ciudad="Cancún" data-recamaras="1" data-precio="3597660">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/cancun.png" class="card-img-top" alt="Ohana Cancún">
+          <div class="card-body">
+            <h5 class="card-title">🏢 Departamento Ohana en Cancún</h5>
+            <p class="card-text">1 recámara | 1.5 baños | $3,597,660 MXN</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propiedad 4 -->
+      <div class="col-md-4 propiedad" data-ciudad="Cancún" data-recamaras="2" data-precio="5367944">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/laguna.png" class="card-img-top" alt="Vista Laguna Cancún">
+          <div class="card-body">
+            <h5 class="card-title">🌅 Departamento Vista Laguna Cancún</h5>
+            <p class="card-text">2 recámaras | 2 baños | $5,367,944 MXN</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propiedad 5 -->
+      <div class="col-md-4 propiedad" data-ciudad="Tulum" data-recamaras="1" data-precio="3302770">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/colosio.png" class="card-img-top" alt="Moderno Colosio">
+          <div class="card-body">
+            <h5 class="card-title">🏙️ Departamento moderno Colosio</h5>
+            <p class="card-text">1 recámara | 1 baño | $3,302,770 MXN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Pie de página -->
   <footer class="text-center text-lg-start text-white mt-5" style="background-color: #0a4275;">
@@ -267,6 +235,42 @@ include 'php/sesionFunciones.php';
     </div>
   </footer>
 
+
+
+  <!-- Scripts -->
+  <script>
+    function normalizarTexto(texto) {
+      return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    function filtrarPropiedades() {
+      const ciudad = normalizarTexto(document.getElementById("searchCiudad").value.trim());
+      const recamaras = document.getElementById("searchRecamaras").value;
+      const precio = document.getElementById("searchPrecio").value;
+
+      const propiedades = document.querySelectorAll(".propiedad");
+      let hayResultados = false;
+
+      propiedades.forEach(p => {
+        const ciudadProp = normalizarTexto(p.dataset.ciudad);
+        const recamarasProp = p.dataset.recamaras;
+        const precioProp = parseInt(p.dataset.precio);
+
+        const coincideCiudad = !ciudad || ciudadProp.includes(ciudad);
+        const coincideRecamaras = !recamaras || recamarasProp === recamaras;
+        const coincidePrecio = !precio || precioProp <= parseInt(precio);
+
+        if (coincideCiudad && coincideRecamaras && coincidePrecio) {
+          p.classList.remove("d-none");
+          hayResultados = true;
+        } else {
+          p.classList.add("d-none");
+        }
+      });
+
+      document.getElementById("mensajeNoResultados").style.display = hayResultados ? "none" : "block";
+    }
+  </script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

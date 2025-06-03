@@ -4,24 +4,93 @@ session_start();
 function mostrarMensajeError()
 {
     if (isset($_GET['error']) && !empty($_GET['error'])) {
-        echo '<div class="alert alert-danger text-center" role="alert">';
-        echo '<i class="bi bi-exclamation-circle-fill"></i> ' . htmlspecialchars($_GET['error']);
-        echo '<br>';
-        echo '<button class="btn btn-secondary mt-3 btn-danger" onclick="window.history.back()">Volver</button>';
+        echo '<div class="d-flex align-items-center justify-content-center min-vh-100">';
+        echo '<div class="alert alert-danger text-center p-4 shadow-lg rounded-3 w-50 animate__animated animate__fadeIn">';
+        echo '<i class="bi bi-exclamation-circle-fill fs-1 text-danger"></i>';
+        echo '<h4 class="mt-3 fw-bold">' . htmlspecialchars($_GET['error']) . '</h4>';
+        echo '<p class="mb-3">Hubo un problema. Por favor, intenta nuevamente.</p>';
+        echo '<p class="fw-bold">Redirigiendo en <span id="contador">10</span> segundos...</p>';
+        echo '<button class="btn btn-danger px-4 py-2 fw-bold" onclick="window.location.href = document.referrer;">Volver</button>';
         echo '</div>';
+        echo '</div>';
+
+        // Script para el contador y la redirección automática
+        echo '<script>
+                let tiempo = 10;
+                const contador = document.getElementById("contador");
+
+                const interval = setInterval(() => {
+                    tiempo--;
+                    contador.textContent = tiempo;
+                    if (tiempo === 0) {
+                        clearInterval(interval);
+                        window.location.href = document.referrer;
+                    }
+                }, 1000);
+              </script>';
     }
 }
 
 function mostrarMensajeExito()
 {
     if (isset($_GET['success']) && !empty($_GET['success'])) {
-        echo '<div class="alert alert-success text-center" role="alert">';
-        echo '<i class="bi bi-check-circle-fill"></i> ' . htmlspecialchars($_GET['success']);
-        echo '<br>';
-        echo '<button class="btn btn-success mt-3" onclick="window.location.href = document.referrer;">Volver</button>';
+        echo '<div class="d-flex align-items-center justify-content-center min-vh-100">';
+        echo '<div class="alert alert-success text-center p-4 shadow-lg rounded-3 w-50 animate__animated animate__fadeIn">';
+        echo '<i class="bi bi-check-circle-fill fs-1 text-success"></i>';
+        echo '<h4 class="mt-3 fw-bold">' . htmlspecialchars($_GET['success']) . '</h4>';
+        echo '<p class="mb-3">Tu operación se realizó correctamente.</p>';
+        echo '<p class="fw-bold">Redirigiendo en <span id="contador">5</span> segundos...</p>';
+        echo '<button class="btn btn-success px-4 py-2 fw-bold" onclick="window.location.href = document.referrer;">Volver</button>';
         echo '</div>';
+        echo '</div>';
+
+        // Script para el contador y la redirección automática
+        echo '<script>
+                let tiempo = 5;
+                const contador = document.getElementById("contador");
+
+                const interval = setInterval(() => {
+                    tiempo--;
+                    contador.textContent = tiempo;
+                    if (tiempo === 0) {
+                        clearInterval(interval);
+                        window.location.href = document.referrer;
+                    }
+                }, 1000);
+              </script>';
     }
 }
+
+function mostrarMensajeExito2()
+{
+    if (isset($_GET['success']) && !empty($_GET['success'])) {
+        echo '<div class="d-flex align-items-center justify-content-center min-vh-100">';
+        echo '<div class="alert alert-success text-center p-4 shadow-lg rounded-3 w-50 animate__animated animate__fadeIn">';
+        echo '<i class="bi bi-check-circle-fill fs-1 text-success"></i>';
+        echo '<h4 class="mt-3 fw-bold">' . htmlspecialchars($_GET['success']) . '</h4>';
+        echo '<p class="mb-3">Tu operación se realizó correctamente.</p>';
+        echo '<p class="fw-bold">Redirigiendo en <span id="contador">5</span> segundos...</p>';
+        echo '<button class="btn btn-success px-4 py-2 fw-bold" onclick="window.location.href =\'../contacto.php\'">Volver</button>';
+        echo '</div>';
+        echo '</div>';
+
+        // Script para el contador y la redirección automática
+        echo '<script>
+                let tiempo = 5;
+                const contador = document.getElementById("contador");
+
+                const interval = setInterval(() => {
+                    tiempo--;
+                    contador.textContent = tiempo;
+                    if (tiempo === 0) {
+                        clearInterval(interval);
+                        window.location.href = "../contacto.php";
+                    }
+                }, 1000);
+              </script>';
+    }
+}
+
 
 
 
@@ -45,7 +114,7 @@ function mostrarDatosUsuario($usuario)
 {
 
     echo "<h4 class='text-center'>¡Hola, " . htmlspecialchars($usuario) . "!</h4>";
-    // echo $_SESSION['id_usuario'] ? "<p class='text-center'>ID de usuario: " . htmlspecialchars($_SESSION['id_usuario']) . "</p>" : "";
+    //echo $_SESSION['id_usuario'] ? "<p class='text-center'>ID de usuario: " . htmlspecialchars($_SESSION['id_usuario']) . "</p>" : "";
     echo "<p class='text-center'>Ya estás conectado.</p>";
     echo "<a href='php/logout.php' class='btn btn-danger w-100'>Cerrar sesión</a>";
 }

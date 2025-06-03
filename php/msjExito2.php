@@ -13,6 +13,6 @@
 <?php
 include 'sesionFunciones.php';
 
-mostrarMensajeExito();
+mostrarMensajeExito2();
 
 ?>
